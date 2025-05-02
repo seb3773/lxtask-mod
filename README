@@ -16,4 +16,8 @@ new features,and some improvement of the user interface.
 -systray menu with 'keep above' and quit   ;)
 
 
-Notes for compilation: it requires intltool and GTK+ 2.6 or newer; use ./configure CFLAGS="-Ofast -flto"  for optimized build.
+Notes for compilation: it requires intltool and GTK+ 2.6 or newer
+
+First run ./autogen.sh
+then run ./configure CFLAGS="-O2 -fstrict-aliasing -flto -ffunction-sections -fdata-sections -fno-asynchronous-unwind-tables -fno-unwind-tables -fomit-frame-pointer -ffast-math -fvisibility=hidden -fuse-ld=gold -Wl,--gc-sections,--build-id=none,-O1 -s"
+
